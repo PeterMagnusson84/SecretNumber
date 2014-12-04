@@ -1,0 +1,11 @@
+﻿@model GuessSecretNumber.Models.SecretNumberMessages
+@{
+    ViewBag.Title = "RightGuess";
+}
+
+<div class="rightguess">
+    <h2>Du gissade rätt!</h2>
+    @Html.ActionLink("Gissa på ett nytt nummer", "Index")
+
+    @Html.Partial("_Array", Model)
+</div>

@@ -1,0 +1,16 @@
+﻿@model GuessSecretNumber.Models.SecretNumberMessages
+
+@{
+    ViewBag.Title = "Guessed";
+}
+
+@Html.Partial("_Form", Model.SecretNumber)
+
+<div class="guessed">
+    @Model.MessageCount
+    @Model.SecretNumber.LastGuessedNumber.Value.Number
+    @Model.TheMessage(Model.Outcome)
+</div>
+
+    @Html.Partial("_Array", Model)
+

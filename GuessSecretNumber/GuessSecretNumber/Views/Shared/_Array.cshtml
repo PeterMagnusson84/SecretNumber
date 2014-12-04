@@ -1,0 +1,12 @@
+﻿@model GuessSecretNumber.Models.SecretNumberMessages
+
+
+    <ul class="array">
+        @foreach (var item in Model.SecretNumber.GuessedNumber)
+        {           //Visar numret som man har gissat på tillsammans med ett meddelande om hur man gissade.
+            <li>   @item.Number @Model.TheMessage(@item.Outcome) </li>
+        }
+    </ul>
+
+
+

@@ -1,0 +1,24 @@
+﻿@model GuessSecretNumber.Models.SecretNumber
+@{
+    ViewBag.Title = "_Form";
+}
+<div class="form">
+    <h2>Gissa det hemliga numret</h2>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        //Skriver ut en label "Skriv ett nummer" ifrån Models->SecretNumber.cs
+        @Html.LabelFor(Model => Model.Guess)
+
+        @Html.EditorFor(Model => Model.Guess)
+        //Felmeddelande som hämtas ifrån Models->SecretNumber.cs
+        @Html.ValidationMessageFor(Model => Model.Guess)
+
+        <input type="submit" value="Gissa!" />
+    }
+
+
+</div>
