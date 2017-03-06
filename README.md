@@ -2,4 +2,4 @@ Gissa det hemliga nummret
 ============
 ASP.NET MVC
 
-www.guesssecretnumber.azurewebsites.net
+http://guesssecretnumber.azurewebsites.net
